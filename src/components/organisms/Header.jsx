@@ -24,8 +24,9 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  const navItems = [
+const navItems = [
     { label: 'Shop', href: '/shop' },
+    { label: 'Orders', href: '/orders' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' }
   ]
