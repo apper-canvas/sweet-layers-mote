@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
-import ApperIcon from '@/components/ApperIcon'
-import Button from '@/components/atoms/Button'
-import SearchBar from '@/components/molecules/SearchBar'
-import CartIcon from '@/components/molecules/CartIcon'
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { AnimatePresence, motion } from "framer-motion";
+import { AuthContext } from "../../App";
+import ApperIcon from "@/components/ApperIcon";
+import Button from "@/components/atoms/Button";
+import SearchBar from "@/components/molecules/SearchBar";
+import CartIcon from "@/components/molecules/CartIcon";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const navigate = useNavigate()
+  const { logout } = useContext(AuthContext)
+  const { user, isAuthenticated } = useSelector((state) => state.user)
 
   const handleSearch = (searchTerm) => {
     if (searchTerm.trim()) {
@@ -64,8 +68,27 @@ const navItems = [
           </div>
 
           {/* Actions */}
+{/* Actions */}
           <div className="flex items-center gap-4">
             <CartIcon onClick={handleCartClick} />
+            
+            {/* User Actions */}
+            {isAuthenticated && (
+              <div className="hidden md:flex items-center gap-3">
+                <span className="text-sm text-gray-600">
+                  Hello, {user?.firstName || user?.name || 'User'}
+                </span>
+                <Button
+                  onClick={logout}
+                  variant="ghost"
+                  size="sm"
+                  className="flex items-center gap-2"
+                >
+                  <ApperIcon name="LogOut" size={16} />
+                  Logout
+                </Button>
+              </div>
+            )}
             
             {/* Mobile Menu Button */}
             <Button
@@ -76,7 +99,6 @@ const navItems = [
             >
               <ApperIcon name={isMenuOpen ? "X" : "Menu"} size={24} />
             </Button>
-          </div>
         </div>
 
         {/* Mobile Search Bar */}
@@ -94,7 +116,7 @@ const navItems = [
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-white border-t border-gray-100"
           >
-            <div className="px-4 py-4 space-y-4">
+<div className="px-4 py-4 space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
@@ -105,6 +127,27 @@ const navItems = [
                   {item.label}
                 </Link>
               ))}
+              
+              {/* Mobile User Actions */}
+              {isAuthenticated && (
+                <div className="border-t pt-4 space-y-3">
+                  <div className="text-sm text-gray-600">
+                    Hello, {user?.firstName || user?.name || 'User'}
+                  </div>
+                  <Button
+                    onClick={() => {
+                      logout()
+                      setIsMenuOpen(false)
+                    }}
+                    variant="ghost"
+                    size="sm"
+                    className="flex items-center gap-2 w-full justify-start"
+                  >
+                    <ApperIcon name="LogOut" size={16} />
+                    Logout
+                  </Button>
+                </div>
+              )}
             </div>
           </motion.div>
         )}
