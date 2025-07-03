@@ -209,10 +209,189 @@
     "description": "Enchanting castle-shaped cake with towers, flags, and princess decorations. Perfect for little princesses and fairy tale themed parties.",
     "flavors": ["Strawberry", "Vanilla", "Pink Champagne"],
     "allergens": ["gluten", "dairy", "eggs"],
-    "sizes": [
-      { "name": "Small", "serves": "12-15", "multiplier": 1 },
+{ "name": "Small", "serves": "12-15", "multiplier": 1 },
       { "name": "Medium", "serves": "18-22", "multiplier": 1.4 },
       { "name": "Large", "serves": "28-35", "multiplier": 1.8 }
+    ]
+  },
+{
+    "Id": 13,
+    "name": "Black Forest Cherry Cake",
+    "category": "featured",
+    "basePrice": 62,
+    "images": [
+      "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Traditional German Black Forest cake with chocolate sponge, cherry filling, and whipped cream. Decorated with fresh cherries and chocolate shavings.",
+    "flavors": ["Chocolate", "Cherry", "Vanilla"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "sizes": [
+      { "name": "Small", "serves": "8-10", "multiplier": 1 },
+      { "name": "Medium", "serves": "14-18", "multiplier": 1.5 },
+      { "name": "Large", "serves": "22-28", "multiplier": 2.1 }
+    ]
+  },
+{
+    "Id": 14,
+    "name": "Tropical Coconut Paradise",
+    "category": "seasonal",
+    "basePrice": 54,
+    "images": [
+      "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1540337706094-da10342c93d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Light and airy coconut cake with pineapple filling and coconut cream frosting. Topped with toasted coconut flakes and tropical fruit decorations.",
+    "flavors": ["Coconut", "Pineapple", "Mango"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "sizes": [
+      { "name": "Small", "serves": "8-10", "multiplier": 1 },
+      { "name": "Medium", "serves": "14-18", "multiplier": 1.5 },
+      { "name": "Large", "serves": "22-28", "multiplier": 2.0 }
+    ]
+  },
+{
+    "Id": 15,
+    "name": "Dinosaur Adventure Cake",
+    "category": "custom",
+    "basePrice": 68,
+    "images": [
+      "https://images.unsplash.com/photo-1464195643332-1f236b1c2255?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Prehistoric-themed cake with dinosaur figurines, edible rocks, and volcanic eruption effects. Perfect for little paleontologists and adventure seekers.",
+    "flavors": ["Chocolate", "Vanilla", "Strawberry"],
+    "allergens": ["gluten", "dairy", "eggs", "soy"],
+    "sizes": [
+      { "name": "Small", "serves": "10-12", "multiplier": 1 },
+      { "name": "Medium", "serves": "16-20", "multiplier": 1.5 },
+      { "name": "Large", "serves": "25-30", "multiplier": 2.0 }
+    ]
+  },
+{
+    "Id": 16,
+    "name": "Salted Caramel Cheesecake",
+    "category": "featured",
+    "basePrice": 58,
+    "images": [
+      "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1535254973040-607b474cb50d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Rich and creamy cheesecake with salted caramel swirl and graham cracker crust. Topped with caramel drizzle and sea salt flakes.",
+    "flavors": ["Salted Caramel", "Vanilla", "Chocolate"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "sizes": [
+      { "name": "Small", "serves": "8-10", "multiplier": 1 },
+      { "name": "Medium", "serves": "14-18", "multiplier": 1.6 },
+      { "name": "Large", "serves": "22-28", "multiplier": 2.2 }
+    ]
+  },
+{
+    "Id": 17,
+    "name": "Rustic Apple Cinnamon Cake",
+    "category": "seasonal",
+    "basePrice": 46,
+    "images": [
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Homestyle apple cake with cinnamon spice and brown butter frosting. Topped with caramelized apple slices and cinnamon dust.",
+    "flavors": ["Apple Cinnamon", "Maple", "Vanilla"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "sizes": [
+      { "name": "Small", "serves": "8-10", "multiplier": 1 },
+      { "name": "Medium", "serves": "14-18", "multiplier": 1.5 },
+      { "name": "Large", "serves": "22-28", "multiplier": 2.1 }
+    ]
+  },
+{
+    "Id": 18,
+    "name": "Elegant Rose Gold Wedding Cake",
+    "category": "wedding",
+    "basePrice": 95,
+    "images": [
+      "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1540337706094-da10342c93d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Sophisticated two-tier wedding cake with rose gold accents and sugar flowers. Features delicate piping work and pearl details.",
+    "flavors": ["Champagne", "Vanilla Bean", "Strawberry"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "sizes": [
+      { "name": "Small", "serves": "25-30", "multiplier": 1 },
+      { "name": "Medium", "serves": "40-50", "multiplier": 1.4 },
+      { "name": "Large", "serves": "65-80", "multiplier": 1.8 }
+    ]
+  },
+{
+    "Id": 19,
+    "name": "Funfetti Birthday Surprise",
+    "category": "birthday",
+    "basePrice": 48,
+    "images": [
+      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1464195643332-1f236b1c2255?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Colorful funfetti cake with vanilla buttercream and rainbow sprinkles. Perfect for birthday celebrations with vibrant colors and joy.",
+    "flavors": ["Funfetti", "Vanilla", "Strawberry"],
+    "allergens": ["gluten", "dairy", "eggs", "soy"],
+    "sizes": [
+      { "name": "Small", "serves": "8-10", "multiplier": 1 },
+      { "name": "Medium", "serves": "14-18", "multiplier": 1.5 },
+      { "name": "Large", "serves": "22-28", "multiplier": 2.0 }
+    ]
+  },
+{
+    "Id": 20,
+    "name": "Espresso Tiramisu Cake",
+    "category": "featured",
+    "basePrice": 65,
+    "images": [
+      "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Italian-inspired tiramisu cake with coffee-soaked layers and mascarpone cream. Dusted with cocoa powder and coffee beans.",
+    "flavors": ["Espresso", "Mascarpone", "Chocolate"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "sizes": [
+      { "name": "Small", "serves": "8-10", "multiplier": 1 },
+      { "name": "Medium", "serves": "14-18", "multiplier": 1.6 },
+      { "name": "Large", "serves": "22-28", "multiplier": 2.3 }
+    ]
+  },
+{
+    "Id": 21,
+    "name": "Mermaid Ocean Fantasy",
+    "category": "custom",
+    "basePrice": 72,
+    "images": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Enchanting mermaid-themed cake with ocean waves, seashells, and mermaid tail decorations. Features blue ombre frosting and edible pearls.",
+    "flavors": ["Coconut", "Blue Raspberry", "Vanilla"],
+    "allergens": ["gluten", "dairy", "eggs", "soy"],
+    "sizes": [
+      { "name": "Small", "serves": "10-12", "multiplier": 1 },
+      { "name": "Medium", "serves": "16-20", "multiplier": 1.5 },
+      { "name": "Large", "serves": "25-30", "multiplier": 2.0 }
+    ]
+  },
+{
+    "Id": 22,
+    "name": "Gourmet Chocolate Raspberry Tart",
+    "category": "featured",
+    "basePrice": 60,
+    "images": [
+      "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1565661834013-d196ca487614?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Elegant chocolate tart with raspberry filling and dark chocolate ganache. Topped with fresh raspberries and gold leaf accents.",
+    "flavors": ["Dark Chocolate", "Raspberry", "Vanilla"],
+    "allergens": ["gluten", "dairy", "eggs"],
+    "sizes": [
+      { "name": "Small", "serves": "8-10", "multiplier": 1 },
+      { "name": "Medium", "serves": "14-18", "multiplier": 1.5 },
+      { "name": "Large", "serves": "22-28", "multiplier": 2.2 }
     ]
   }
 ]
