@@ -17,7 +17,8 @@ const ProductDetail = () => {
   const [error, setError] = useState('')
   const [selectedImage, setSelectedImage] = useState(0)
   const [showCustomizer, setShowCustomizer] = useState(false)
-
+  const [imageErrors, setImageErrors] = useState({})
+  const [imageLoading, setImageLoading] = useState({})
   useEffect(() => {
     loadCake()
   }, [id])
@@ -99,7 +100,7 @@ const ProductDetail = () => {
           Back to Shop
         </Button>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Image Gallery */}
           <div className="space-y-4">
             <motion.div
@@ -109,11 +110,26 @@ const ProductDetail = () => {
               transition={{ duration: 0.3 }}
               className="aspect-square rounded-xl overflow-hidden shadow-lg"
             >
-              <img
-                src={cake.images[selectedImage]}
-                alt={cake.name}
-                className="w-full h-full object-cover"
-              />
+              {imageLoading[selectedImage] && (
+                <div className="w-full h-full bg-gray-200 shimmer flex items-center justify-center">
+                  <ApperIcon name="Image" size={48} className="text-gray-400" />
+                </div>
+              )}
+              {!imageErrors[selectedImage] ? (
+                <img
+                  src={cake.images[selectedImage]}
+                  alt={cake.name}
+                  className={`w-full h-full object-cover ${imageLoading[selectedImage] ? 'hidden' : 'block'}`}
+                  onError={() => setImageErrors(prev => ({ ...prev, [selectedImage]: true }))}
+                  onLoad={() => setImageLoading(prev => ({ ...prev, [selectedImage]: false }))}
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-secondary/50 to-primary/20 flex flex-col items-center justify-center">
+                  <ApperIcon name="ImageOff" size={64} className="text-gray-400 mb-4" />
+                  <span className="text-lg text-gray-500 font-medium">{cake.name}</span>
+                  <span className="text-sm text-gray-400">Image unavailable</span>
+                </div>
+              )}
             </motion.div>
             
             {cake.images.length > 1 && (
@@ -128,11 +144,18 @@ const ProductDetail = () => {
                         : 'border-gray-200 hover:border-gray-300'
                     }`}
                   >
-                    <img
-                      src={image}
-                      alt={`${cake.name} ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
+                    {!imageErrors[index] ? (
+                      <img
+                        src={image}
+                        alt={`${cake.name} ${index + 1}`}
+                        className="w-full h-full object-cover"
+                        onError={() => setImageErrors(prev => ({ ...prev, [index]: true }))}
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-secondary/50 to-primary/20 flex items-center justify-center">
+                        <ApperIcon name="ImageOff" size={16} className="text-gray-400" />
+                      </div>
+                    )}
                   </button>
                 ))}
               </div>

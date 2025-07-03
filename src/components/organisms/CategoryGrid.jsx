@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import ApperIcon from '@/components/ApperIcon'
 
 const CategoryGrid = () => {
+  const [imageErrors, setImageErrors] = useState({})
+
   const categories = [
     {
       id: 'birthday',
@@ -65,17 +68,24 @@ const CategoryGrid = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Link
+<Link
                 to={`/shop?category=${category.id}`}
                 className="group block"
               >
                 <div className="relative bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                   <div className="aspect-square relative">
-                    <img
-                      src={category.image}
-                      alt={category.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                    {!imageErrors[category.id] ? (
+                      <img
+                        src={category.image}
+                        alt={category.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        onError={() => setImageErrors(prev => ({ ...prev, [category.id]: true }))}
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-secondary/50 to-primary/20 flex items-center justify-center">
+                        <ApperIcon name="ImageOff" size={48} className="text-gray-400" />
+                      </div>
+                    )}
                     <div className={`absolute inset-0 bg-gradient-to-t ${category.color} opacity-80`}></div>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center text-white">

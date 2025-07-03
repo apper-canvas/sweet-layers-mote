@@ -1,10 +1,11 @@
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import ApperIcon from '@/components/ApperIcon'
-import Button from '@/components/atoms/Button'
-import Badge from '@/components/atoms/Badge'
-import { useCart } from '@/hooks/useCart'
-import { toast } from 'react-toastify'
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import React, { useState } from "react";
+import { useCart } from "@/hooks/useCart";
+import ApperIcon from "@/components/ApperIcon";
+import Badge from "@/components/atoms/Badge";
+import Button from "@/components/atoms/Button";
 
 const ProductCard = ({ cake, className = '' }) => {
   const { addToCart } = useCart()
@@ -29,6 +30,18 @@ const ProductCard = ({ cake, className = '' }) => {
     })
   }
 
+const [imageError, setImageError] = useState(false)
+  const [imageLoading, setImageLoading] = useState(true)
+
+  const handleImageError = () => {
+    setImageError(true)
+    setImageLoading(false)
+  }
+
+  const handleImageLoad = () => {
+    setImageLoading(false)
+  }
+
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
@@ -36,11 +49,26 @@ const ProductCard = ({ cake, className = '' }) => {
     >
       <Link to={`/product/${cake.Id}`}>
         <div className="relative">
-          <img
-            src={cake.images[0]}
-            alt={cake.name}
-            className="w-full h-48 object-cover"
-          />
+          {imageLoading && (
+            <div className="w-full h-48 bg-gray-200 shimmer flex items-center justify-center">
+              <ApperIcon name="Image" size={24} className="text-gray-400" />
+            </div>
+          )}
+          {!imageError ? (
+            <img
+              src={cake.images[0]}
+              alt={cake.name}
+              className={`w-full h-48 object-cover ${imageLoading ? 'hidden' : 'block'}`}
+              onError={handleImageError}
+              onLoad={handleImageLoad}
+            />
+          ) : (
+            <div className="w-full h-48 bg-gradient-to-br from-secondary/50 to-primary/20 flex flex-col items-center justify-center">
+              <ApperIcon name="ImageOff" size={32} className="text-gray-400 mb-2" />
+              <span className="text-sm text-gray-500 font-medium">{cake.name}</span>
+              <span className="text-xs text-gray-400">Image unavailable</span>
+            </div>
+          )}
           {cake.category === 'featured' && (
             <Badge
               variant="primary"

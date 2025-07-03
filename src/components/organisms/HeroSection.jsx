@@ -1,9 +1,13 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Button from '@/components/atoms/Button'
 import ApperIcon from '@/components/ApperIcon'
 
 const HeroSection = () => {
+  const [imageError, setImageError] = useState(false)
+  const [imageLoading, setImageLoading] = useState(true)
+
   return (
     <section className="relative bg-gradient-to-br from-primary/10 to-accent/10 overflow-hidden">
       <div className="absolute inset-0 bg-white/50"></div>
@@ -59,16 +63,30 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
-          >
+>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Beautiful custom cake"
-                className="w-full h-96 object-cover"
-              />
+              {imageLoading && (
+                <div className="w-full h-96 bg-gray-200 shimmer flex items-center justify-center">
+                  <ApperIcon name="Image" size={48} className="text-gray-400" />
+                </div>
+              )}
+              {!imageError ? (
+                <img
+                  src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Beautiful custom cake"
+                  className={`w-full h-96 object-cover ${imageLoading ? 'hidden' : 'block'}`}
+                  onError={() => setImageError(true)}
+                  onLoad={() => setImageLoading(false)}
+                />
+              ) : (
+                <div className="w-full h-96 bg-gradient-to-br from-secondary/50 to-primary/20 flex flex-col items-center justify-center">
+                  <ApperIcon name="ImageOff" size={64} className="text-gray-400 mb-4" />
+                  <span className="text-lg text-gray-500 font-medium">Beautiful Custom Cake</span>
+                  <span className="text-sm text-gray-400">Image unavailable</span>
+                </div>
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
-            
             {/* Floating badges */}
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
