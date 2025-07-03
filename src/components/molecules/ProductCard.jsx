@@ -51,7 +51,7 @@ const ProductCard = ({ cake, className = '' }) => {
           )}
         </div>
         
-        <div className="p-4">
+<div className="p-4">
           <h3 className="font-display text-lg font-semibold text-gray-900 mb-2">
             {cake.name}
           </h3>
@@ -60,6 +60,20 @@ const ProductCard = ({ cake, className = '' }) => {
             {cake.description}
           </p>
           
+          {/* Allergen Badges */}
+          {cake.allergens && cake.allergens.length > 0 && (
+            <div className="flex flex-wrap gap-1 mb-3">
+              {cake.allergens.map((allergen) => (
+                <Badge
+                  key={allergen}
+                  variant="warning"
+                  className="text-xs capitalize"
+                >
+                  {allergen}
+                </Badge>
+              ))}
+            </div>
+          )}
           <div className="flex items-center justify-between">
             <div className="flex flex-col">
               <span className="text-lg font-bold text-primary gradient-text">

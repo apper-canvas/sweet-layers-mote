@@ -3,10 +3,11 @@ import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
 
 const FilterSidebar = ({ filters, onFilterChange, className = '' }) => {
-  const [activeFilters, setActiveFilters] = useState({
+const [activeFilters, setActiveFilters] = useState({
     category: '',
     flavor: '',
-    priceRange: ''
+    priceRange: '',
+    allergens: []
   })
 
   const categories = [
@@ -33,6 +34,14 @@ const FilterSidebar = ({ filters, onFilterChange, className = '' }) => {
     { value: '50-100', label: '$50 - $100' },
     { value: '100-200', label: '$100 - $200' },
     { value: '200+', label: '$200+' }
+]
+
+  const allergenOptions = [
+    { value: 'gluten', label: 'Gluten-Free' },
+    { value: 'dairy', label: 'Dairy-Free' },
+    { value: 'nuts', label: 'Nut-Free' },
+    { value: 'eggs', label: 'Egg-Free' },
+    { value: 'soy', label: 'Soy-Free' }
   ]
 
   const handleFilterChange = (filterType, value) => {
@@ -41,9 +50,19 @@ const FilterSidebar = ({ filters, onFilterChange, className = '' }) => {
     onFilterChange(newFilters)
   }
 
+const handleAllergenChange = (allergen) => {
+    const newAllergens = activeFilters.allergens.includes(allergen)
+      ? activeFilters.allergens.filter(a => a !== allergen)
+      : [...activeFilters.allergens, allergen]
+    
+    const newFilters = { ...activeFilters, allergens: newAllergens }
+    setActiveFilters(newFilters)
+    onFilterChange(newFilters)
+  }
+
   const clearFilters = () => {
-    setActiveFilters({ category: '', flavor: '', priceRange: '' })
-    onFilterChange({ category: '', flavor: '', priceRange: '' })
+    setActiveFilters({ category: '', flavor: '', priceRange: '', allergens: [] })
+    onFilterChange({ category: '', flavor: '', priceRange: '', allergens: [] })
   }
 
   return (
@@ -127,6 +146,28 @@ const FilterSidebar = ({ filters, onFilterChange, className = '' }) => {
                   className="text-primary focus:ring-primary"
                 />
                 <span className="ml-2 text-sm text-gray-700">{range.label}</span>
+              </label>
+            ))}
+          </div>
+</div>
+
+        {/* Allergen Filter */}
+        <div>
+          <h4 className="font-medium text-gray-900 mb-3">Dietary Restrictions</h4>
+          <div className="space-y-2">
+            {allergenOptions.map((allergen) => (
+              <label
+                key={allergen.value}
+                className="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors"
+              >
+                <input
+                  type="checkbox"
+                  value={allergen.value}
+                  checked={activeFilters.allergens.includes(allergen.value)}
+                  onChange={() => handleAllergenChange(allergen.value)}
+                  className="text-primary focus:ring-primary"
+                />
+                <span className="ml-2 text-sm text-gray-700">{allergen.label}</span>
               </label>
             ))}
           </div>

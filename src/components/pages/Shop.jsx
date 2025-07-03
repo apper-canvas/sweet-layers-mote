@@ -63,7 +63,7 @@ const Shop = () => {
       )
     }
     
-    // Apply price range filter
+// Apply price range filter
     const priceRange = searchParams.get('priceRange')
     if (priceRange && priceRange !== '') {
       const [min, max] = priceRange.split('-').map(Number)
@@ -72,6 +72,17 @@ const Shop = () => {
       } else if (max) {
         filtered = filtered.filter(cake => cake.basePrice >= min && cake.basePrice <= max)
       }
+    }
+    
+    // Apply allergen filter
+    const allergens = searchParams.get('allergens')
+    if (allergens) {
+      const selectedAllergens = allergens.split(',')
+      filtered = filtered.filter(cake => 
+        selectedAllergens.every(allergen => 
+          !cake.allergens || !cake.allergens.includes(allergen)
+        )
+      )
     }
     
     setFilteredCakes(filtered)
@@ -87,11 +98,17 @@ const Shop = () => {
     setSearchParams(params)
   }
 
-  const handleFilterChange = (filters) => {
+const handleFilterChange = (filters) => {
     const params = new URLSearchParams(searchParams)
     
     Object.entries(filters).forEach(([key, value]) => {
-      if (value) {
+      if (key === 'allergens') {
+        if (value && value.length > 0) {
+          params.set(key, value.join(','))
+        } else {
+          params.delete(key)
+        }
+      } else if (value) {
         params.set(key, value)
       } else {
         params.delete(key)
@@ -158,11 +175,12 @@ const Shop = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Filter Sidebar */}
           <div className={`lg:col-span-1 ${showFilters ? 'block' : 'hidden lg:block'}`}>
-            <FilterSidebar
+<FilterSidebar
               filters={{
                 category: searchParams.get('category') || '',
                 flavor: searchParams.get('flavor') || '',
-                priceRange: searchParams.get('priceRange') || ''
+                priceRange: searchParams.get('priceRange') || '',
+                allergens: searchParams.get('allergens') ? searchParams.get('allergens').split(',') : []
               }}
               onFilterChange={handleFilterChange}
               className="sticky top-24"

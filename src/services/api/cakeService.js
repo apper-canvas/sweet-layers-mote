@@ -36,3 +36,16 @@ export const getFeaturedCakes = async () => {
   await delay(300)
   return cakesData.filter(cake => cake.category === 'featured')
 }
+
+export const getAllergenFreeCakes = async (allergens) => {
+  await delay(250)
+  if (!allergens || allergens.length === 0) {
+    return [...cakesData]
+  }
+  
+  return cakesData.filter(cake => 
+    allergens.every(allergen => 
+      !cake.allergens || !cake.allergens.includes(allergen)
+    )
+  )
+}

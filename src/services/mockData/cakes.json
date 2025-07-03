@@ -1,5 +1,5 @@
 [
-  {
+{
     "Id": 1,
     "name": "Classic Chocolate Birthday Cake",
     "category": "birthday",
@@ -10,13 +10,14 @@
     ],
     "description": "Rich, moist chocolate cake with creamy chocolate buttercream frosting. Perfect for birthday celebrations with decorative piping and customizable colors.",
     "flavors": ["Chocolate", "Vanilla", "Strawberry"],
+    "allergens": ["gluten", "dairy", "eggs"],
     "sizes": [
       { "name": "Small", "serves": "6-8", "multiplier": 1 },
       { "name": "Medium", "serves": "12-15", "multiplier": 1.5 },
       { "name": "Large", "serves": "20-25", "multiplier": 2.2 }
     ]
   },
-  {
+{
     "Id": 2,
     "name": "Elegant Wedding Cake",
     "category": "wedding",
@@ -27,13 +28,14 @@
     ],
     "description": "Three-tier elegant wedding cake with delicate fondant work and beautiful floral decorations. Customizable flavors for each tier.",
     "flavors": ["Vanilla", "Lemon", "Red Velvet", "Carrot"],
+    "allergens": ["gluten", "dairy", "eggs"],
     "sizes": [
       { "name": "Small", "serves": "30-40", "multiplier": 1 },
       { "name": "Medium", "serves": "50-60", "multiplier": 1.4 },
       { "name": "Large", "serves": "80-100", "multiplier": 1.8 }
     ]
   },
-  {
+{
     "Id": 3,
     "name": "Rainbow Unicorn Cake",
     "category": "custom",
@@ -44,13 +46,14 @@
     ],
     "description": "Magical unicorn-themed cake with rainbow layers, buttercream rosettes, and edible glitter. Perfect for children's parties and unicorn lovers.",
     "flavors": ["Vanilla", "Strawberry", "Funfetti"],
+    "allergens": ["gluten", "dairy", "eggs", "soy"],
     "sizes": [
       { "name": "Small", "serves": "10-12", "multiplier": 1 },
       { "name": "Medium", "serves": "16-20", "multiplier": 1.5 },
       { "name": "Large", "serves": "25-30", "multiplier": 2 }
     ]
   },
-  {
+{
     "Id": 4,
     "name": "Red Velvet Delight",
     "category": "featured",
@@ -61,13 +64,14 @@
     ],
     "description": "Classic red velvet cake with smooth cream cheese frosting. Moist, tender crumb with a hint of cocoa and a beautiful deep red color.",
     "flavors": ["Red Velvet", "Chocolate", "Vanilla"],
+    "allergens": ["gluten", "dairy", "eggs"],
     "sizes": [
       { "name": "Small", "serves": "8-10", "multiplier": 1 },
       { "name": "Medium", "serves": "14-18", "multiplier": 1.6 },
       { "name": "Large", "serves": "22-28", "multiplier": 2.3 }
     ]
   },
-  {
+{
     "Id": 5,
     "name": "Seasonal Pumpkin Spice",
     "category": "seasonal",
@@ -78,13 +82,14 @@
     ],
     "description": "Seasonal pumpkin spice cake with warm autumn spices and cream cheese frosting. Available during fall season with decorative autumn leaves.",
     "flavors": ["Pumpkin Spice", "Cinnamon", "Maple"],
+    "allergens": ["gluten", "dairy", "eggs"],
     "sizes": [
       { "name": "Small", "serves": "6-8", "multiplier": 1 },
       { "name": "Medium", "serves": "12-15", "multiplier": 1.5 },
       { "name": "Large", "serves": "20-25", "multiplier": 2.1 }
     ]
   },
-  {
+{
     "Id": 6,
     "name": "Lemon Blueberry Cake",
     "category": "featured",
@@ -95,13 +100,14 @@
     ],
     "description": "Fresh lemon cake with blueberry compote and lemon buttercream. Light, refreshing, and perfect for spring and summer celebrations.",
     "flavors": ["Lemon", "Blueberry", "Vanilla"],
+    "allergens": ["gluten", "dairy", "eggs"],
     "sizes": [
       { "name": "Small", "serves": "8-10", "multiplier": 1 },
       { "name": "Medium", "serves": "14-18", "multiplier": 1.5 },
       { "name": "Large", "serves": "22-26", "multiplier": 2.2 }
     ]
   },
-  {
+{
     "Id": 7,
     "name": "Chocolate Ganache Celebration",
     "category": "birthday",
@@ -112,13 +118,14 @@
     ],
     "description": "Decadent chocolate cake with rich ganache coating and chocolate decorations. Perfect for chocolate lovers and special celebrations.",
     "flavors": ["Dark Chocolate", "Milk Chocolate", "Mocha"],
+    "allergens": ["gluten", "dairy", "eggs", "soy"],
     "sizes": [
       { "name": "Small", "serves": "8-10", "multiplier": 1 },
       { "name": "Medium", "serves": "15-18", "multiplier": 1.6 },
       { "name": "Large", "serves": "24-30", "multiplier": 2.4 }
     ]
   },
-  {
+{
     "Id": 8,
     "name": "Vanilla Bean Anniversary",
     "category": "wedding",
@@ -129,13 +136,14 @@
     ],
     "description": "Elegant vanilla bean cake with Swiss buttercream and delicate sugar flowers. Perfect for weddings and anniversaries.",
     "flavors": ["Vanilla Bean", "Champagne", "Strawberry"],
+    "allergens": ["gluten", "dairy", "eggs"],
     "sizes": [
       { "name": "Small", "serves": "20-25", "multiplier": 1 },
       { "name": "Medium", "serves": "35-45", "multiplier": 1.4 },
       { "name": "Large", "serves": "60-75", "multiplier": 1.9 }
     ]
   },
-  {
+{
     "Id": 9,
     "name": "Superhero Adventure Cake",
     "category": "custom",
@@ -146,13 +154,14 @@
     ],
     "description": "Action-packed superhero themed cake with fondant decorations and vibrant colors. Customizable with your favorite superhero characters.",
     "flavors": ["Chocolate", "Vanilla", "Funfetti"],
+    "allergens": ["gluten", "dairy", "eggs", "soy"],
     "sizes": [
       { "name": "Small", "serves": "10-12", "multiplier": 1 },
       { "name": "Medium", "serves": "16-20", "multiplier": 1.5 },
       { "name": "Large", "serves": "25-30", "multiplier": 2 }
     ]
   },
-  {
+{
     "Id": 10,
     "name": "Carrot Cake Supreme",
     "category": "featured",
@@ -163,13 +172,14 @@
     ],
     "description": "Moist carrot cake with cream cheese frosting, walnuts, and raisins. Topped with decorative marzipan carrots and fresh herbs.",
     "flavors": ["Carrot", "Spiced Carrot", "Vanilla"],
+    "allergens": ["gluten", "dairy", "eggs", "nuts"],
     "sizes": [
       { "name": "Small", "serves": "8-10", "multiplier": 1 },
       { "name": "Medium", "serves": "14-18", "multiplier": 1.5 },
       { "name": "Large", "serves": "22-28", "multiplier": 2.2 }
     ]
   },
-  {
+{
     "Id": 11,
     "name": "Winter Wonderland Cake",
     "category": "seasonal",
@@ -180,13 +190,14 @@
     ],
     "description": "Festive winter cake with white chocolate and peppermint flavors. Decorated with edible snowflakes and silver accents.",
     "flavors": ["Peppermint", "White Chocolate", "Eggnog"],
+    "allergens": ["gluten", "dairy", "eggs", "soy"],
     "sizes": [
       { "name": "Small", "serves": "10-12", "multiplier": 1 },
       { "name": "Medium", "serves": "16-20", "multiplier": 1.5 },
       { "name": "Large", "serves": "24-30", "multiplier": 2.1 }
     ]
   },
-  {
+{
     "Id": 12,
     "name": "Princess Castle Cake",
     "category": "custom",
@@ -197,6 +208,7 @@
     ],
     "description": "Enchanting castle-shaped cake with towers, flags, and princess decorations. Perfect for little princesses and fairy tale themed parties.",
     "flavors": ["Strawberry", "Vanilla", "Pink Champagne"],
+    "allergens": ["gluten", "dairy", "eggs"],
     "sizes": [
       { "name": "Small", "serves": "12-15", "multiplier": 1 },
       { "name": "Medium", "serves": "18-22", "multiplier": 1.4 },
