@@ -207,9 +207,10 @@
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     ],
     "description": "Enchanting castle-shaped cake with towers, flags, and princess decorations. Perfect for little princesses and fairy tale themed parties.",
-    "flavors": ["Strawberry", "Vanilla", "Pink Champagne"],
+"flavors": ["Strawberry", "Vanilla", "Pink Champagne"],
     "allergens": ["gluten", "dairy", "eggs"],
-{ "name": "Small", "serves": "12-15", "multiplier": 1 },
+    "sizes": [
+      { "name": "Small", "serves": "12-15", "multiplier": 1 },
       { "name": "Medium", "serves": "18-22", "multiplier": 1.4 },
       { "name": "Large", "serves": "28-35", "multiplier": 1.8 }
     ]
