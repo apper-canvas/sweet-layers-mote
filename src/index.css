@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'react-toastify/dist/ReactToastify.css';
+
+/* Custom toast styling */
+.Toastify__toast {
+  @apply rounded-lg shadow-lg border;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  min-height: 48px;
+  padding: 12px 16px;
+}
+
+.Toastify__toast--success {
+  @apply bg-white border-success text-gray-800;
+}
+
+.Toastify__toast--error {
+  @apply bg-white border-error text-gray-800;
+}
+
+.Toastify__toast--warning {
+  @apply bg-white border-warning text-gray-800;
+}
+
+.Toastify__toast--info {
+  @apply bg-white border-info text-gray-800;
+}
+
+.Toastify__progress-bar {
+  @apply h-1;
+}
+
+.Toastify__close-button {
+  @apply text-gray-400 hover:text-gray-600;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent;
+}
+
+/* Shimmer effect for loading states */
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* Scalloped card edges */
+.scalloped-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.scalloped-card::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  height: 10px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 10px,
+    #D4729A 10px,
+    #D4729A 20px
+  );
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+/* Dotted border accent */
+.dotted-border {
+  border: 2px dotted #D4729A;
+  border-radius: 8px;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #D4729A, #8B4C70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button hover effects */
+.btn-hover {
+  transition: all 0.2s ease-out;
+}
+
+.btn-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(212, 114, 154, 0.3);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.2s ease-out;
+}
+
+.card-hover:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Form focus states */
+.form-input:focus {
+  @apply border-primary ring-2 ring-primary/20;
+}
+
+/* Mobile menu animation */
+.mobile-menu-enter {
+  transform: translateX(-100%);
+}
+
+.mobile-menu-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-out;
+}
+
+.mobile-menu-exit {
+  transform: translateX(0);
+}
+
+.mobile-menu-exit-active {
+  transform: translateX(-100%);
+  transition: transform 300ms ease-out;
+}

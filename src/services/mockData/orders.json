@@ -1,0 +1,63 @@
+[
+  {
+    "Id": 1,
+    "items": [
+      {
+        "cakeId": 1,
+        "quantity": 1,
+        "size": "Medium",
+        "flavor": "Chocolate",
+        "message": "Happy Birthday!",
+        "deliveryDate": "2024-01-15",
+        "price": 67.50
+      }
+    ],
+    "customer": {
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "email": "sarah.johnson@email.com",
+      "phone": "(555) 123-4567"
+    },
+    "delivery": {
+      "type": "delivery",
+      "address": {
+        "street": "123 Main St",
+        "city": "Sweet City",
+        "state": "CA",
+        "zipCode": "90210"
+      },
+      "instructions": "Ring doorbell"
+    },
+    "total": 72.90,
+    "status": "completed",
+    "createdAt": "2024-01-10T10:30:00Z"
+  },
+  {
+    "Id": 2,
+    "items": [
+      {
+        "cakeId": 2,
+        "quantity": 1,
+        "size": "Large",
+        "flavor": "Vanilla",
+        "message": "Congratulations!",
+        "deliveryDate": "2024-01-20",
+        "price": 216.00
+      }
+    ],
+    "customer": {
+      "firstName": "Michael",
+      "lastName": "Chen",
+      "email": "michael.chen@email.com",
+      "phone": "(555) 987-6543"
+    },
+    "delivery": {
+      "type": "pickup",
+      "address": null,
+      "instructions": "Will pick up at 2 PM"
+    },
+    "total": 233.28,
+    "status": "pending",
+    "createdAt": "2024-01-12T14:15:00Z"
+  }
+]

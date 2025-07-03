@@ -1,0 +1,206 @@
+[
+  {
+    "Id": 1,
+    "name": "Classic Chocolate Birthday Cake",
+    "category": "birthday",
+    "basePrice": 45,
+    "images": [
+      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1464195643332-1f236b1c2255?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Rich, moist chocolate cake with creamy chocolate buttercream frosting. Perfect for birthday celebrations with decorative piping and customizable colors.",
+    "flavors": ["Chocolate", "Vanilla", "Strawberry"],
+    "sizes": [
+      { "name": "Small", "serves": "6-8", "multiplier": 1 },
+      { "name": "Medium", "serves": "12-15", "multiplier": 1.5 },
+      { "name": "Large", "serves": "20-25", "multiplier": 2.2 }
+    ]
+  },
+  {
+    "Id": 2,
+    "name": "Elegant Wedding Cake",
+    "category": "wedding",
+    "basePrice": 120,
+    "images": [
+      "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1535254973040-607b474cb50d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Three-tier elegant wedding cake with delicate fondant work and beautiful floral decorations. Customizable flavors for each tier.",
+    "flavors": ["Vanilla", "Lemon", "Red Velvet", "Carrot"],
+    "sizes": [
+      { "name": "Small", "serves": "30-40", "multiplier": 1 },
+      { "name": "Medium", "serves": "50-60", "multiplier": 1.4 },
+      { "name": "Large", "serves": "80-100", "multiplier": 1.8 }
+    ]
+  },
+  {
+    "Id": 3,
+    "name": "Rainbow Unicorn Cake",
+    "category": "custom",
+    "basePrice": 65,
+    "images": [
+      "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Magical unicorn-themed cake with rainbow layers, buttercream rosettes, and edible glitter. Perfect for children's parties and unicorn lovers.",
+    "flavors": ["Vanilla", "Strawberry", "Funfetti"],
+    "sizes": [
+      { "name": "Small", "serves": "10-12", "multiplier": 1 },
+      { "name": "Medium", "serves": "16-20", "multiplier": 1.5 },
+      { "name": "Large", "serves": "25-30", "multiplier": 2 }
+    ]
+  },
+  {
+    "Id": 4,
+    "name": "Red Velvet Delight",
+    "category": "featured",
+    "basePrice": 50,
+    "images": [
+      "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Classic red velvet cake with smooth cream cheese frosting. Moist, tender crumb with a hint of cocoa and a beautiful deep red color.",
+    "flavors": ["Red Velvet", "Chocolate", "Vanilla"],
+    "sizes": [
+      { "name": "Small", "serves": "8-10", "multiplier": 1 },
+      { "name": "Medium", "serves": "14-18", "multiplier": 1.6 },
+      { "name": "Large", "serves": "22-28", "multiplier": 2.3 }
+    ]
+  },
+  {
+    "Id": 5,
+    "name": "Seasonal Pumpkin Spice",
+    "category": "seasonal",
+    "basePrice": 42,
+    "images": [
+      "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Seasonal pumpkin spice cake with warm autumn spices and cream cheese frosting. Available during fall season with decorative autumn leaves.",
+    "flavors": ["Pumpkin Spice", "Cinnamon", "Maple"],
+    "sizes": [
+      { "name": "Small", "serves": "6-8", "multiplier": 1 },
+      { "name": "Medium", "serves": "12-15", "multiplier": 1.5 },
+      { "name": "Large", "serves": "20-25", "multiplier": 2.1 }
+    ]
+  },
+  {
+    "Id": 6,
+    "name": "Lemon Blueberry Cake",
+    "category": "featured",
+    "basePrice": 48,
+    "images": [
+      "https://images.unsplash.com/photo-1565661834013-d196ca487614?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Fresh lemon cake with blueberry compote and lemon buttercream. Light, refreshing, and perfect for spring and summer celebrations.",
+    "flavors": ["Lemon", "Blueberry", "Vanilla"],
+    "sizes": [
+      { "name": "Small", "serves": "8-10", "multiplier": 1 },
+      { "name": "Medium", "serves": "14-18", "multiplier": 1.5 },
+      { "name": "Large", "serves": "22-26", "multiplier": 2.2 }
+    ]
+  },
+  {
+    "Id": 7,
+    "name": "Chocolate Ganache Celebration",
+    "category": "birthday",
+    "basePrice": 55,
+    "images": [
+      "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Decadent chocolate cake with rich ganache coating and chocolate decorations. Perfect for chocolate lovers and special celebrations.",
+    "flavors": ["Dark Chocolate", "Milk Chocolate", "Mocha"],
+    "sizes": [
+      { "name": "Small", "serves": "8-10", "multiplier": 1 },
+      { "name": "Medium", "serves": "15-18", "multiplier": 1.6 },
+      { "name": "Large", "serves": "24-30", "multiplier": 2.4 }
+    ]
+  },
+  {
+    "Id": 8,
+    "name": "Vanilla Bean Anniversary",
+    "category": "wedding",
+    "basePrice": 85,
+    "images": [
+      "https://images.unsplash.com/photo-1540337706094-da10342c93d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Elegant vanilla bean cake with Swiss buttercream and delicate sugar flowers. Perfect for weddings and anniversaries.",
+    "flavors": ["Vanilla Bean", "Champagne", "Strawberry"],
+    "sizes": [
+      { "name": "Small", "serves": "20-25", "multiplier": 1 },
+      { "name": "Medium", "serves": "35-45", "multiplier": 1.4 },
+      { "name": "Large", "serves": "60-75", "multiplier": 1.9 }
+    ]
+  },
+  {
+    "Id": 9,
+    "name": "Superhero Adventure Cake",
+    "category": "custom",
+    "basePrice": 70,
+    "images": [
+      "https://images.unsplash.com/photo-1464195643332-1f236b1c2255?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Action-packed superhero themed cake with fondant decorations and vibrant colors. Customizable with your favorite superhero characters.",
+    "flavors": ["Chocolate", "Vanilla", "Funfetti"],
+    "sizes": [
+      { "name": "Small", "serves": "10-12", "multiplier": 1 },
+      { "name": "Medium", "serves": "16-20", "multiplier": 1.5 },
+      { "name": "Large", "serves": "25-30", "multiplier": 2 }
+    ]
+  },
+  {
+    "Id": 10,
+    "name": "Carrot Cake Supreme",
+    "category": "featured",
+    "basePrice": 52,
+    "images": [
+      "https://images.unsplash.com/photo-1535254973040-607b474cb50d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Moist carrot cake with cream cheese frosting, walnuts, and raisins. Topped with decorative marzipan carrots and fresh herbs.",
+    "flavors": ["Carrot", "Spiced Carrot", "Vanilla"],
+    "sizes": [
+      { "name": "Small", "serves": "8-10", "multiplier": 1 },
+      { "name": "Medium", "serves": "14-18", "multiplier": 1.5 },
+      { "name": "Large", "serves": "22-28", "multiplier": 2.2 }
+    ]
+  },
+  {
+    "Id": 11,
+    "name": "Winter Wonderland Cake",
+    "category": "seasonal",
+    "basePrice": 58,
+    "images": [
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Festive winter cake with white chocolate and peppermint flavors. Decorated with edible snowflakes and silver accents.",
+    "flavors": ["Peppermint", "White Chocolate", "Eggnog"],
+    "sizes": [
+      { "name": "Small", "serves": "10-12", "multiplier": 1 },
+      { "name": "Medium", "serves": "16-20", "multiplier": 1.5 },
+      { "name": "Large", "serves": "24-30", "multiplier": 2.1 }
+    ]
+  },
+  {
+    "Id": 12,
+    "name": "Princess Castle Cake",
+    "category": "custom",
+    "basePrice": 75,
+    "images": [
+      "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Enchanting castle-shaped cake with towers, flags, and princess decorations. Perfect for little princesses and fairy tale themed parties.",
+    "flavors": ["Strawberry", "Vanilla", "Pink Champagne"],
+    "sizes": [
+      { "name": "Small", "serves": "12-15", "multiplier": 1 },
+      { "name": "Medium", "serves": "18-22", "multiplier": 1.4 },
+      { "name": "Large", "serves": "28-35", "multiplier": 1.8 }
+    ]
+  }
+]
