@@ -15,21 +15,19 @@ function App() {
 return (
     <CartProvider>
       <div className="min-h-screen bg-background">
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="shop" element={<Shop />} />
-              <Route path="product/:id" element={<ProductDetail />} />
-              <Route path="cart" element={<Cart />} />
-              <Route path="checkout" element={<Checkout />} />
-              <Route path="orders" element={<OrderList />} />
-              <Route path="about" element={<About />} />
-              <Route path="contact" element={<Contact />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-<ToastContainer
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="shop" element={<Shop />} />
+            <Route path="product/:id" element={<ProductDetail />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="checkout" element={<Checkout />} />
+            <Route path="orders" element={<OrderList />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
+        </Routes>
+        <ToastContainer
           position="top-right"
           autoClose={3000}
           hideProgressBar={false}
