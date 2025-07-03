@@ -3,12 +3,6 @@ import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
 
 const FilterSidebar = ({ filters, onFilterChange, className = '' }) => {
-const [activeFilters, setActiveFilters] = useState({
-    category: '',
-    flavor: '',
-    priceRange: '',
-    allergens: []
-  })
 
   const categories = [
     { value: '', label: 'All Categories' },
@@ -44,24 +38,21 @@ const [activeFilters, setActiveFilters] = useState({
     { value: 'soy', label: 'Soy-Free' }
   ]
 
-  const handleFilterChange = (filterType, value) => {
-    const newFilters = { ...activeFilters, [filterType]: value }
-    setActiveFilters(newFilters)
+const handleFilterChange = (filterType, value) => {
+    const newFilters = { ...filters, [filterType]: value }
     onFilterChange(newFilters)
   }
 
-const handleAllergenChange = (allergen) => {
-    const newAllergens = activeFilters.allergens.includes(allergen)
-      ? activeFilters.allergens.filter(a => a !== allergen)
-      : [...activeFilters.allergens, allergen]
+  const handleAllergenChange = (allergen) => {
+    const newAllergens = filters.allergens.includes(allergen)
+      ? filters.allergens.filter(a => a !== allergen)
+      : [...filters.allergens, allergen]
     
-    const newFilters = { ...activeFilters, allergens: newAllergens }
-    setActiveFilters(newFilters)
+    const newFilters = { ...filters, allergens: newAllergens }
     onFilterChange(newFilters)
   }
 
   const clearFilters = () => {
-    setActiveFilters({ category: '', flavor: '', priceRange: '', allergens: [] })
     onFilterChange({ category: '', flavor: '', priceRange: '', allergens: [] })
   }
 
@@ -91,11 +82,11 @@ const handleAllergenChange = (allergen) => {
                 key={category.value}
                 className="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors"
               >
-                <input
+<input
                   type="radio"
                   name="category"
                   value={category.value}
-                  checked={activeFilters.category === category.value}
+                  checked={filters.category === category.value}
                   onChange={(e) => handleFilterChange('category', e.target.value)}
                   className="text-primary focus:ring-primary"
                 />
@@ -114,11 +105,11 @@ const handleAllergenChange = (allergen) => {
                 key={flavor.value}
                 className="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors"
               >
-                <input
+<input
                   type="radio"
                   name="flavor"
                   value={flavor.value}
-                  checked={activeFilters.flavor === flavor.value}
+                  checked={filters.flavor === flavor.value}
                   onChange={(e) => handleFilterChange('flavor', e.target.value)}
                   className="text-primary focus:ring-primary"
                 />
@@ -137,11 +128,11 @@ const handleAllergenChange = (allergen) => {
                 key={range.value}
                 className="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors"
               >
-                <input
+<input
                   type="radio"
                   name="priceRange"
                   value={range.value}
-                  checked={activeFilters.priceRange === range.value}
+                  checked={filters.priceRange === range.value}
                   onChange={(e) => handleFilterChange('priceRange', e.target.value)}
                   className="text-primary focus:ring-primary"
                 />
@@ -160,10 +151,10 @@ const handleAllergenChange = (allergen) => {
                 key={allergen.value}
                 className="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors"
               >
-                <input
+<input
                   type="checkbox"
                   value={allergen.value}
-                  checked={activeFilters.allergens.includes(allergen.value)}
+                  checked={filters.allergens.includes(allergen.value)}
                   onChange={() => handleAllergenChange(allergen.value)}
                   className="text-primary focus:ring-primary"
                 />
